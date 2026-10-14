@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Graceview Christian Pre-School | Educating, Nurturing Young Minds</title>
-<meta name="description" content="Graceview Christian Pre-School in Brakpan, Johannesburg. A caring Christian environment where children learn, explore and grow. Enquire on WhatsApp today.">
+<meta name="description" content="Graceview Christian Pre-School: a caring Christian place where young minds are nurtured and curiosity is encouraged. Enquire on WhatsApp today.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Graceview Christian Pre-School | Educating, Nurturing Young Minds">
-<meta property="og:description" content="A beautiful place to learn, grow and shine.">
+<meta property="og:description" content="Little beginnings. Bright futures.">
 <meta property="og:image" content="images/image1.jpeg">
-<link rel="icon" href="images/logo.jpeg">
+<link rel="icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,19 +20,14 @@
 
 <header class="header" id="header">
   <div class="container nav">
-    <a href="#home" class="brand">
-      <!-- LOGO PATH: change src here if the logo file has a different name -->
-      <img src="images/logo.jpeg" alt="Graceview Christian Pre-School logo" width="52" height="52">
+    <a href="#home" class="brand" aria-label="Graceview Christian Pre-School home">
+      <!-- LOGO: embedded in script.js (LOGO constant); images/logo.png is the fallback -->
+      <img class="logo-img" src="images/logo.png" alt="Graceview Christian Pre-School logo" width="52" height="52">
       <span>Graceview<small>Christian Pre-School</small></span>
     </a>
     <nav id="menu" class="menu" aria-label="Main">
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#gallery">Our Gallery</a>
-      <a href="#why">Why Choose Us</a>
-      <a href="#fees">Fees</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-yellow nav-cta" href="https://wa.me/27747961211" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      <a href="#home">Home</a><a href="#about">About Us</a><a href="#approach">Our Approach</a><a href="#gallery">Gallery</a><a href="#fees">Fees</a><a href="#faq">FAQs</a><a href="#contact">Contact</a>
+      <a class="btn btn-yellow nav-cta" href="#contact">Enquire Now</a>
     </nav>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
   </div>
@@ -40,136 +35,195 @@
 
 <main>
 <section class="hero" id="home">
-  <img class="hero-img" src="images/image1.jpeg" alt="Children at Graceview Christian Pre-School" fetchpriority="high">
-  <div class="hero-overlay"></div>
-  <span class="star s1" aria-hidden="true">★</span><span class="star s2" aria-hidden="true">★</span><span class="star s3" aria-hidden="true">★</span>
-  <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+  <!-- HERO IMAGE: swap image1.jpeg for any gallery photo; adjust object-position in style.css (.hero-img) -->
+  <img class="hero-img" id="heroImg" src="images/image1.jpeg" alt="Children enjoying their day at Graceview Christian Pre-School" fetchpriority="high">
+  <div class="hero-shade"></div>
+  <span class="deco ring" aria-hidden="true" data-speed="-0.08"></span>
+  <span class="deco dot" aria-hidden="true" data-speed="0.12"></span>
+  <span class="deco star st1" aria-hidden="true">★</span>
+  <span class="deco star st2" aria-hidden="true">★</span>
   <div class="container hero-content">
-    <p class="label hero-a">Welcome to Graceview Christian Pre-School</p>
-    <h1 class="hero-a">A Beautiful Place to Learn, Grow &amp; Shine.</h1>
-    <p class="lead hero-a">Educating, nurturing and encouraging young minds in a caring environment where children can learn, explore and grow.</p>
-    <p class="motto hero-a">Educating, Nurturing Young Minds</p>
-    <div class="btns hero-a">
+    <p class="kicker h-in">Graceview Christian Pre-School</p>
+    <h1 class="h-in">Little Beginnings.<br><em>Bright Futures.</em></h1>
+    <p class="lead h-in">A caring place where young minds are nurtured, curiosity is encouraged, and every child is given room to grow.</p>
+    <p class="motto h-in">Educating, Nurturing Young Minds.</p>
+    <div class="btns h-in">
       <a class="btn btn-yellow" href="#about">Discover Graceview</a>
-      <a class="btn btn-glass" href="https://wa.me/27747961211" target="_blank" rel="noopener">Chat with Us on WhatsApp</a>
+      <a class="btn btn-ghost" href="https://wa.me/27746480568" target="_blank" rel="noopener">Enquire on WhatsApp</a>
     </div>
   </div>
-  <a href="#about" class="scroll" aria-label="Scroll down"><span></span></a>
+  <a href="#about" class="scroll" aria-label="Scroll to About"><span></span></a>
+  <div class="container panel-wrap">
+    <ul class="panel glass-dark h-in" aria-label="Our themes">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5-8-11a4.500 4.500 0 0 1 8-2.800A4.500 4.500 0 0 1 20 10c0 6-8 11-8 11z"/></svg><b>A Caring Environment</b></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.900 6.200 6.800.8-5 4.700 1.300 6.700L12 17.100 6 20.400l1.300-6.700-5-4.700 6.800-.8z"/></svg><b>Learning Through Discovery</b></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5c3-1 6-1 8 1 2-2 5-2 8-1v13c-3-1-6-1-8 1-2-2-5-2-8-1z"/></svg><b>Educating Young Minds</b></li>
+    </ul>
+  </div>
 </section>
 
 <section class="section about" id="about">
   <div class="container about-grid">
-    <div class="about-media reveal">
-      <div class="shape" aria-hidden="true"></div>
+    <div class="frames rv">
+      <span class="frame f1" aria-hidden="true"></span>
+      <span class="frame f2" aria-hidden="true"></span>
       <img class="about-img" src="images/about.jpeg" alt="Joyce, owner of Graceview Christian Pre-School" loading="lazy">
-      <div class="glass owner"><strong>Joyce</strong><span>Owner</span></div>
+      <div class="owner"><b>Joyce</b><span>Owner</span></div>
     </div>
-    <div class="reveal">
-      <p class="label dark">About Us</p>
-      <h2>Growing Bright Minds with Care and Purpose.</h2>
+    <div class="about-text rv">
+      <p class="kicker dark">About Us</p>
+      <h2>A Place to Belong, <em>Learn and Grow.</em></h2>
       <p>At Graceview Christian Pre-School, we believe every child deserves an environment where they feel welcomed, cared for and encouraged to learn. Inspired by our commitment to educating and nurturing young minds, we aim to make every learning experience meaningful, positive and memorable.</p>
-      <p class="addr">111 Gardiner Street, Brakpan, Johannesburg</p>
+      <blockquote>Every little mind deserves the opportunity to shine.</blockquote>
+      <p class="sign">Joyce &mdash; Owner</p>
     </div>
   </div>
 </section>
 
-<section class="section alt" id="why">
+<section class="section approach" id="approach">
   <div class="container">
-    <div class="head reveal">
-      <p class="label dark">Our Approach</p>
-      <h2>Why Families Choose Graceview</h2>
-    </div>
-    <div class="cards">
-      <article class="card glass reveal">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v6h6v4h-6v10h-4V12H4V8h6z"/></svg>
-        <h3>Christian Values</h3><p>A learning environment guided by Christian inspiration, kindness, respect and positive values.</p>
-      </article>
-      <article class="card glass reveal">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.800-8 11-8 11z"/></svg>
-        <h3>Nurturing Care</h3><p>Helping children feel welcomed, valued and encouraged.</p>
-      </article>
-      <article class="card glass reveal">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.900 6.300 6.900.8-5.100 4.700 1.400 6.800L12 17.200 5.900 20.600l1.400-6.800L2.200 9.100l6.900-.8z"/></svg>
-        <h3>Learning Through Discovery</h3><p>Encouraging curiosity, exploration and a love of learning.</p>
-      </article>
-      <article class="card glass reveal">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="7" r="3.500"/><circle cx="16.500" cy="8" r="3"/><path d="M2 20c0-4 3-6 6-6s6 2 6 6zM14 20c.2-2.500 1.500-4.200 3-4.800 3 0 5 1.800 5 4.800z"/></svg>
-        <h3>Growing Together</h3><p>Supporting children's development through a caring and encouraging environment.</p>
-      </article>
+    <div class="sec-head rv"><p class="kicker dark">Our Approach</p><h2>Four Ideas That <em>Guide Our Days.</em></h2></div>
+    <div class="rows">
+      <article class="row rv"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v6h6v4h-6v10h-4V12H4V8h6z"/></svg></div><div><h3>Christian Values</h3><p>A learning environment inspired by kindness, respect, care, and positive Christian values.</p></div></article>
+      <article class="row rv"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5-8-11a4.500 4.500 0 0 1 8-2.800A4.500 4.500 0 0 1 20 10c0 6-8 11-8 11z"/></svg></div><div><h3>Nurturing Care</h3><p>Encouraging children to feel welcomed, valued, and supported.</p></div></article>
+      <article class="row rv"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.900 6.200 6.800.8-5 4.700 1.300 6.700L12 17.100 6 20.400l1.300-6.700-5-4.700 6.800-.8z"/></svg></div><div><h3>Learning Through Discovery</h3><p>Encouraging curiosity, exploration, creativity, and a love of learning.</p></div></article>
+      <article class="row rv"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="7" r="3.500"/><circle cx="16.500" cy="8" r="3"/><path d="M2 20c0-4 3-6 6-6s6 2 6 6zM14 20c.2-2.500 1.500-4.200 3-4.800 3 0 5 1.800 5 4.800z"/></svg></div><div><h3>Growing Together</h3><p>Supporting children's development through positive and caring experiences.</p></div></article>
     </div>
   </div>
 </section>
 
-<section class="section" id="gallery">
+<section class="section gallery" id="gallery">
   <div class="container">
-    <div class="head reveal">
-      <p class="label dark">Our Gallery</p>
-      <h2>Little Moments. Beautiful Memories.</h2>
-      <p>Take a glimpse into the world of Graceview Christian Pre-School.</p>
-    </div>
-    <div class="masonry" id="masonry"></div>
+    <div class="sec-head rv"><p class="kicker dark">Gallery</p><h2>Little Moments. <em>Beautiful Memories.</em></h2><p>Discover the world of Graceview Christian Pre-School through our photographs.</p></div>
+    <div class="mosaic" id="mosaic"></div>
   </div>
 </section>
 
-<section class="section alt" id="fees">
+<section class="section why" id="why">
+  <span class="deco ring" aria-hidden="true"></span>
+  <div class="container why-grid">
+    <h2 class="rv">What We Stand For.</h2>
+    <ul class="why-list">
+      <li class="rv"><span>A Caring and Welcoming Environment</span></li>
+      <li class="rv"><span>A Focus on Nurturing Young Minds</span></li>
+      <li class="rv"><span>Encouraging Curiosity and Discovery</span></li>
+      <li class="rv"><span>Christian-Inspired Values</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section fees" id="fees">
   <div class="container">
-    <div class="head reveal">
-      <p class="label dark">2027 Fees</p>
-      <h2>Clear, Simple Fees.</h2>
+    <div class="sec-head rv"><p class="kicker dark">2027 Fees</p><h2>Simple, Clear <em>Fees.</em></h2><p>Grace View Christian Kids Academy (Graceview Christian Pre-School) fee structure and rates for 2027.</p></div>
+    <div class="fees-grid">
+      <div class="rv table-wrap">
+        <table class="fee-table">
+          <caption class="sr">2027 fee structure and rates</caption>
+          <thead><tr><th scope="col">Category / Programme</th><th scope="col">Fee</th><th scope="col">Billing Cycle</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Registration Fee</th><td>R500</td><td>Once-off</td></tr>
+            <tr><th scope="row">Babies</th><td>R900</td><td>Per month</td></tr>
+            <tr><th scope="row">Grade RR</th><td>R800</td><td>Per month</td></tr>
+            <tr><th scope="row">Grade R</th><td>R800</td><td>Per month</td></tr>
+            <tr><th scope="row">After Care</th><td>R450</td><td>Per month</td></tr>
+            <tr><th scope="row">Overtime (Late Pickup)</th><td>R80 / hour</td><td>Per hour</td></tr>
+            <tr><th scope="row">Saturday Care</th><td>R120</td><td>Per session</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <aside class="bank rv" aria-labelledby="bankTitle">
+        <h3 id="bankTitle">Official Banking Details</h3>
+        <p class="bank-name">Grace View Christian Kids Academy</p>
+        <dl>
+          <div><dt>Bank Name</dt><dd>Capitec Bank</dd></div>
+          <div><dt>Account No</dt><dd>1696471484</dd></div>
+          <div><dt>Account Type</dt><dd>Current</dd></div>
+          <div><dt>Branch Code</dt><dd>470010</dd></div>
+        </dl>
+        <p><b>Payment reference:</b> please use the child's name and surname.</p>
+        <p><b>Proof of payment:</b> WhatsApp it to 074 796 1211, 074 648 0568 or 067 134 2168.</p>
+      </aside>
     </div>
-    <div class="fees reveal">
-      <div class="fee"><span>Registration Fee</span><b>R500</b><small>Once-off</small></div>
-      <div class="fee"><span>Babies</span><b>R900</b><small>Per month</small></div>
-      <div class="fee"><span>Grade RR</span><b>R800</b><small>Per month</small></div>
-      <div class="fee"><span>Grade R</span><b>R800</b><small>Per month</small></div>
-      <div class="fee"><span>After Care</span><b>R450</b><small>Per month</small></div>
-      <div class="fee"><span>Overtime (Late Pickup)</span><b>R80</b><small>Per hour</small></div>
-      <div class="fee"><span>Saturday Care</span><b>R120</b><small>Per session</small></div>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="container faq-grid">
+    <div class="rv faq-intro">
+      <p class="kicker dark">FAQs</p>
+      <h2>Questions Parents <em>Often Ask.</em></h2>
+      <p>We understand that choosing a preschool is an important decision. Here are some helpful answers.</p>
     </div>
-    <div class="pay glass reveal">
-      <h3>Payment details</h3>
-      <p><strong>Grace View Christian Kids Academy</strong> &middot; Capitec Bank &middot; Current account</p>
-      <p>Account no: 1696471484 &middot; Branch code: 470010</p>
-      <p>Use the child's name and surname as the payment reference, then WhatsApp your proof of payment to 074 796 1211, 074 648 0568 or 067 134 2168.</p>
+    <div class="acc rv" id="acc">
+      <div class="acc-item">
+        <h3><button class="acc-q" id="q1" aria-expanded="false" aria-controls="a1">What is Graceview Christian Pre-School about?<i aria-hidden="true"></i></button></h3>
+        <div class="acc-a" id="a1" role="region" aria-labelledby="q1"><div><p>Graceview Christian Pre-School (officially Grace View Christian Kids Academy) is a Christian pre-school committed to educating and nurturing young minds, in a caring environment where children can learn, explore and grow.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3><button class="acc-q" id="q2" aria-expanded="false" aria-controls="a2">How can I enquire about enrolling my child?<i aria-hidden="true"></i></button></h3>
+        <div class="acc-a" id="a2" role="region" aria-labelledby="q2"><div><p>Send a message to Joyce on WhatsApp or use the enquiry form below. She will share the current enrolment information with you.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3><button class="acc-q" id="q3" aria-expanded="false" aria-controls="a3">How can I contact the school?<i aria-hidden="true"></i></button></h3>
+        <div class="acc-a" id="a3" role="region" aria-labelledby="q3"><div><p>WhatsApp us on +27 74 648 0568 or +27 69 532 3472, call 074 796 1211 or 067 134 2168, or email graceviewchristiankidsacademy@gmail.com.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3><button class="acc-q" id="q4" aria-expanded="false" aria-controls="a4">Can I arrange a visit or ask questions before enrolling?<i aria-hidden="true"></i></button></h3>
+        <div class="acc-a" id="a4" role="region" aria-labelledby="q4"><div><p>Questions are always welcome. We are at 111 Gardiner Street, Brakpan, Johannesburg. Message Joyce on WhatsApp to arrange a visit and have your questions answered.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3><button class="acc-q" id="q5" aria-expanded="false" aria-controls="a5">Where can I find out more about the school's programmes and fees?<i aria-hidden="true"></i></button></h3>
+        <div class="acc-a" id="a5" role="region" aria-labelledby="q5"><div><p>Our 2027 fees are listed in the Fees section above, including registration, monthly fees, after care and Saturday care. For programme details, contact Joyce on WhatsApp.</p></div></div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section contact" id="contact">
-  <span class="star s2" aria-hidden="true">★</span>
-  <div class="container">
-    <div class="head reveal light">
-      <p class="label">Contact</p>
-      <h2>Let’s Start Your Child’s Journey.</h2>
-      <p>Have a question about Graceview Christian Pre-School? We would love to hear from you.</p>
+  <div class="container contact-grid">
+    <div class="rv contact-info">
+      <p class="kicker">Enquiries</p>
+      <h2>Let's Begin Your Child's <em>Journey.</em></h2>
+      <p>Have a question about Graceview Christian Pre-School? Reach out and let us help you find the information you need.</p>
+      <a class="wa-card" href="https://wa.me/27746480568" target="_blank" rel="noopener"><small>WhatsApp 1</small><b>+27 74 648 0568</b></a>
+      <a class="wa-card" href="https://wa.me/27695323472" target="_blank" rel="noopener"><small>WhatsApp 2</small><b>+27 69 532 3472</b></a>
+      <ul class="details">
+        <li><span>Address</span>111 Gardiner Street, Brakpan, Johannesburg</li>
+        <li><span>Email</span><a href="mailto:graceviewchristiankidsacademy@gmail.com">graceviewchristiankidsacademy@gmail.com</a></li>
+        <li><span>Phone &amp; WhatsApp</span><a href="https://wa.me/27747961211" target="_blank" rel="noopener">074 796 1211</a> &middot; <a href="https://wa.me/27746480568" target="_blank" rel="noopener">074 648 0568</a> &middot; <a href="https://wa.me/27671342168" target="_blank" rel="noopener">067 134 2168</a></li>
+      </ul>
     </div>
-    <div class="contact-grid">
-      <div class="wa-list reveal">
-        <div class="wa glass"><span>WhatsApp Contact 1</span><b>074 796 1211</b><a class="btn btn-yellow" href="https://wa.me/27747961211" target="_blank" rel="noopener">WhatsApp 074 796 1211</a></div>
-        <div class="wa glass"><span>WhatsApp Contact 2</span><b>074 648 0568</b><a class="btn btn-yellow" href="https://wa.me/27746480568" target="_blank" rel="noopener">WhatsApp 074 648 0568</a></div>
-        <div class="wa glass"><span>WhatsApp Contact 3</span><b>067 134 2168</b><a class="btn btn-yellow" href="https://wa.me/27671342168" target="_blank" rel="noopener">WhatsApp 067 134 2168</a></div>
-        <p class="mail">Email: <a href="mailto:graceviewchristiankidsacademy@gmail.com">graceviewchristiankidsacademy@gmail.com</a></p>
-      </div>
-      <form class="form glass reveal" id="form" novalidate>
-        <h3>Send an enquiry</h3>
-        <label for="parent">Parent / Guardian Name *</label>
-        <input id="parent" name="parent" type="text" autocomplete="name" required>
-        <label for="phone">Phone Number *</label>
-        <input id="phone" name="phone" type="tel" autocomplete="tel" required>
-        <label for="child">Child's Name (optional)</label>
-        <input id="child" name="child" type="text">
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        <fieldset>
-          <legend>Send via WhatsApp to</legend>
-          <label class="radio"><input type="radio" name="num" value="27747961211" checked> 074 796 1211</label>
-          <label class="radio"><input type="radio" name="num" value="27746480568"> 074 648 0568</label>
-          <label class="radio"><input type="radio" name="num" value="27671342168"> 067 134 2168</label>
-        </fieldset>
-        <p class="err" id="err" role="alert" aria-live="polite"></p>
-        <button class="btn btn-yellow" type="submit">Submit Enquiry</button>
-        <small>Your message opens in WhatsApp so you can review it before sending.</small>
-      </form>
+    <form class="form rv" id="form" novalidate>
+      <label for="parent">Parent / Guardian Name *</label>
+      <input id="parent" name="parent" type="text" autocomplete="name" required>
+      <label for="phone">Phone Number *</label>
+      <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+      <label for="child">Child's Name (optional)</label>
+      <input id="child" name="child" type="text">
+      <label for="message">Message or Question *</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <fieldset>
+        <legend>Preferred Contact Method</legend>
+        <label class="radio"><input type="radio" name="num" value="27746480568" checked> WhatsApp 1 (+27 74 648 0568)</label>
+        <label class="radio"><input type="radio" name="num" value="27695323472"> WhatsApp 2 (+27 69 532 3472)</label>
+        <label class="radio"><input type="radio" name="num" value="27747961211"> 074 796 1211</label>
+        <label class="radio"><input type="radio" name="num" value="27671342168"> 067 134 2168</label>
+      </fieldset>
+      <p class="err" id="err" role="alert" aria-live="polite"></p>
+      <button class="btn btn-yellow" type="submit">Send Enquiry</button>
+      <small>Your enquiry is completed in WhatsApp, where you can review the message before sending.</small>
+    </form>
+  </div>
+</section>
+
+<section class="cta">
+  <span class="deco ring" aria-hidden="true"></span><span class="deco star st1" aria-hidden="true">★</span>
+  <div class="container rv">
+    <h2>Every Great Journey Starts with a <em>Little Step.</em></h2>
+    <p>Get in touch with Graceview Christian Pre-School and discover more about our approach to nurturing young minds.</p>
+    <div class="btns center">
+      <a class="btn btn-yellow" href="https://wa.me/27746480568" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      <button class="btn btn-ghost" type="button" id="toTopCta">Back to Top</button>
     </div>
   </div>
 </section>
@@ -178,34 +232,30 @@
 <footer class="footer">
   <div class="container foot-grid">
     <div>
-      <img src="images/logo.jpeg" alt="Graceview Christian Pre-School logo" width="84" height="84" loading="lazy">
+      <img class="logo-img" src="images/logo.png" alt="Graceview Christian Pre-School logo" width="96" height="96">
       <h3>Graceview Christian Pre-School</h3>
-      <p>Educating, Nurturing Young Minds.</p>
-      <p class="small">We would love to welcome your family.</p>
+      <p class="sky">Educating, Nurturing Young Minds.</p>
+      <p class="official">Grace View Christian Kids Academy</p>
+      <p>We would love to welcome you and your little one.</p>
     </div>
-    <div>
-      <h4>Quick links</h4>
-      <a href="#home">Home</a><a href="#about">About Us</a><a href="#gallery">Our Gallery</a><a href="#why">Why Choose Us</a><a href="#fees">Fees</a><a href="#contact">Contact</a>
-    </div>
-    <div>
-      <h4>WhatsApp</h4>
-      <a href="https://wa.me/27747961211" target="_blank" rel="noopener">074 796 1211</a>
-      <a href="https://wa.me/27746480568" target="_blank" rel="noopener">074 648 0568</a>
-      <a href="https://wa.me/27671342168" target="_blank" rel="noopener">067 134 2168</a>
-    </div>
+    <div><h4>Navigate</h4><a href="#home">Home</a><a href="#about">About Us</a><a href="#approach">Our Approach</a><a href="#gallery">Gallery</a><a href="#fees">Fees</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></div>
+    <div><h4>WhatsApp</h4><a href="https://wa.me/27746480568" target="_blank" rel="noopener">+27 74 648 0568</a><a href="https://wa.me/27695323472" target="_blank" rel="noopener">+27 69 532 3472</a><a href="https://wa.me/27747961211" target="_blank" rel="noopener">074 796 1211</a><a href="https://wa.me/27671342168" target="_blank" rel="noopener">067 134 2168</a><a href="mailto:graceviewchristiankidsacademy@gmail.com">graceviewchristiankidsacademy@gmail.com</a><p class="addr">111 Gardiner Street, Brakpan, Johannesburg</p></div>
   </div>
   <p class="copy">&copy; <span id="year">2026</span> Graceview Christian Pre-School. All rights reserved.</p>
 </footer>
 
-<button class="top" id="top" aria-label="Back to top">↑</button>
+<a class="wa-float" id="waFloat" href="https://wa.me/27746480568" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <span class="tip">Have a question? Chat with us.</span>
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.300 8.700 3.300 15.700c0 2.300.6 4.400 1.700 6.300L3 29l7.200-1.900a12.600 12.600 0 0 0 5.800 1.500c7 0 12.700-5.700 12.700-12.700S23 3 16 3zm0 23c-1.900 0-3.700-.5-5.300-1.500l-.4-.2-4.200 1.100 1.100-4.100-.3-.4a10.300 10.300 0 1 1 9.100 5.100zm5.700-7.700c-.3-.2-1.800-.9-2.100-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.400 8.400 0 0 1-4.200-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6a1.200 1.200 0 0 0-.9.400 3.800 3.800 0 0 0-1.200 2.800c0 1.700 1.200 3.300 1.400 3.500s2.400 3.700 5.800 5.100c2.100.9 2.900.9 4 .8.600-.1 1.800-.7 2.100-1.500s.3-1.300.2-1.500-.3-.2-.6-.4z"/></svg>
+</a>
+<button class="top" id="top" aria-label="Back to top">&uarr;</button>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
-  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
-  <button class="lb-nav prev" id="lbPrev" aria-label="Previous image">‹</button>
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-btn prev" id="lbPrev" aria-label="Previous image">&lsaquo;</button>
   <img id="lbImg" src="" alt="">
-  <button class="lb-nav next" id="lbNext" aria-label="Next image">›</button>
+  <button class="lb-btn next" id="lbNext" aria-label="Next image">&rsaquo;</button>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
