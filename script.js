@@ -57,7 +57,7 @@
     b.dataset.index = i - 1;
     b.style.setProperty('--d', ((i % 4) * 0.08) + 's');
     b.setAttribute('aria-label', 'Open photo ' + i + ' of ' + TOTAL);
-    b.innerHTML = '<img src="' + src + '" alt="Graceview Christian Pre-School photo ' + i + '" loading="lazy">';
+    b.innerHTML = '<img src="' + src + '" alt="Photo ' + i + ' from Graceview Christian Pre-School in Brakpan" loading="lazy">';
     mosaic.appendChild(b);
   }
 
@@ -66,7 +66,7 @@
   function show(n) {
     cur = (n + set.length) % set.length;
     lbImg.src = set[cur];
-    lbImg.alt = set === images ? 'Graceview Christian Pre-School photo ' + (cur + 1) + ' of ' + TOTAL : singleAlt;
+    lbImg.alt = set === images ? 'Photo ' + (cur + 1) + ' of ' + TOTAL + ' from Graceview Christian Pre-School in Brakpan' : singleAlt;
   }
   function openLb(list, n, alt) {
     lastFocus = document.activeElement;
